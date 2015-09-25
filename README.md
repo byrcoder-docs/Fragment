@@ -4,8 +4,10 @@ Fragment允许将Activity拆分成多个独立封装的可重用组件，使得�
 ![](https://lh3.googleusercontent.com/-JkPDg8wIzNM/Vf9lWXteYxI/AAAAAAAAA94/eHXfjLevN78/s560-Ic42/184532_IjRZ_730588.png)
 
 ### 1. Fragment生命周期
-先来看一张生命周期图
-![](https://lh3.googleusercontent.com/-EC0wugOiZt0/Vf9_u_ta-jI/AAAAAAAAA-E/8QCih2yRC0g/s512-Ic42/184542_fq1V_730588.png)
+先来看一张生命周期图  
+
+![](https://lh3.googleusercontent.com/-EC0wugOiZt0/Vf9_u_ta-jI/AAAAAAAAA-E/8QCih2yRC0g/s512-Ic42/184542_fq1V_730588.png)  
+
 这张Fragment生命周期图详细展示了Fragment各个状态之间的转变，这里给出一些解释和说明。  
 首先要说明的是`onCreate()`和`onDestroy()`有可能被跳过，当在`onCreate()`方法中调用了`setRetainInstance(true)`以后，当Fragment重建的时候这两个方法就会被跳过，并且Fragment的默认构造函数也不会被调用。因此对于`Configuration change`(譬如屏幕旋转)后，希望Fragment以不变形式存在的，可以在`onCreate()`方法中调用`setRetainInstance(true)`。  
 下面分别讲解几个主要的生命周期方法：
