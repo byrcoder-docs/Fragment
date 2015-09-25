@@ -75,7 +75,7 @@ View getView(); //获取Fragment的View，即onCreateView()方法返回的View
 </RelativeLayout>
 ```
 
-```
+```xml
 <!--activity_main.xml-->
 <!--xml file associated to MainActivity-->
 
